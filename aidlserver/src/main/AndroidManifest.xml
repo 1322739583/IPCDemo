@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ipcdemo">
+    package="com.example.aidldemo">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,18 +17,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.ipcdemo.ThirdActivity"
-            android:process="com.example.ipcdemo.process3"/>
-        <activity android:name="com.example.ipcdemo.SecondActivity"
-            android:process="com.example.ipcdemo.process2"/>
-        <activity android:name=".MainActivity"
-            android:process=":remote">
+        <activity android:name="com.example.aidldemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="com.example.aidldemo.AIDLService"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.server" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

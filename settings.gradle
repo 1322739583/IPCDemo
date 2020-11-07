@@ -1,2 +1,4 @@
 rootProject.name='IPCDemo'
 include ':app'
+include ':aidlserver'
+include ':aidlclient'

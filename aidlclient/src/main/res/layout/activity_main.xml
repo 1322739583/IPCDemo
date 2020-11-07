@@ -7,13 +7,25 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnGetBooks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second Activity"
-        android:onClick="startSec"
+        android:text="get BookList"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386" />
+
+    <Button
+        android:id="@+id/btnAddBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="add book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetBooks" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
